@@ -1,0 +1,31 @@
+{
+  "name": "lsp-mcp-server",
+  "version": "1.0.0",
+  "description": "Language Server Protocol MCP Server for AI Code Editors",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "dev": "tsx watch src/index.ts",
+    "start": "node build/index.js"
+  },
+  "keywords": ["mcp", "lsp", "language-server", "ai", "code-editor"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.12",
+    "vscode-languageserver-types": "^3.17.5",
+    "vscode-jsonrpc": "^8.2.1",
+    "glob": "^11.0.0",
+    "minimatch": "^10.0.1",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/glob": "^8.1.0",
+    "typescript": "^5.7.3",
+    "tsx": "^4.19.2"
+  }
+}
